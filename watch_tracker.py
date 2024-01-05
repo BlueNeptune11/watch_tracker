@@ -5,8 +5,9 @@ import matplotlib.pyplot as plt
 input("Press Enter when seconds hand reaches 0")
 dt_true = datetime.datetime.now()
 
-minute = int(input("At what minute did you record the time?"))
-dt_watch = dt_true.replace(minute=minute, second=0, microsecond=0)
+minute = int(input("At what minute did you record the time? "))
+second = int(input("At what second did you record the time? "))
+dt_watch = dt_true.replace(minute=minute, second=second, microsecond=0)
 
 if dt_watch > dt_true:  # watch is running fast, timedelta is positive
 
